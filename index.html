@@ -4,142 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>岡田建設工 | 奈良・大阪・和歌山の大工工務店</title>
-<meta name="description" content="奈良県橿原市を拠点に奈良・大阪・和歌山対応の大工工務店。手すり取付・床補修・建具調整・ウッドデッキなど。大工が直接対応するから安心・丁寧・リーズナブル。見積り無料。奈良県知事許可 第018533号。">
+<meta name="description" content="奈良県橿原市を拠点に奈良・大阪・和歌山対応の大工工務店。写真を送るだけで24時間以内に概算回答。見積り無料。奈良県知事許可 第018533号。">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --gold: #c8a96e;
-  --dark: #1a1a1a;
-  --cream: #f5f0e8;
-  --text: #333;
-  --light: #f9f7f3;
+  --brown-dark: #3d2b1f;
+  --brown-mid: #5c3d2e;
+  --brown-light: #8b5e3c;
+  --wood: #a0724a;
+  --wood-light: #c49a6c;
+  --cream: #faf5ee;
+  --warm-white: #fff9f2;
+  --beige: #f0e6d3;
+  --beige-mid: #e0cdb5;
+  --text-dark: #2a1f16;
+  --text-mid: #5a4030;
+  --text-light: #8a6e5a;
+  --green-cta: #4a7c59;
+  --green-hover: #3d6649;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: #fff; }
+body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-dark); background: var(--warm-white); }
 
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(26,26,26,0.97);
+  background: rgba(61,43,31,0.97);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 40px; height: 56px;
+  padding: 0 40px; height: 60px;
+  border-bottom: 2px solid var(--wood);
 }
-.nav-logo { font-family: 'Noto Serif JP', serif; font-size: 15px; font-weight: 700; color: var(--gold); letter-spacing: 0.2em; }
-.nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a { color: #ccc; font-size: 13px; text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold); }
-.nav-cta { background: var(--gold); color: var(--dark) !important; padding: 8px 20px; font-weight: 700 !important; }
+.nav-logo { display: flex; flex-direction: column; }
+.nav-logo-main { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 700; color: var(--wood-light); letter-spacing: 0.2em; }
+.nav-logo-sub { font-size: 10px; color: #a08070; letter-spacing: 0.1em; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { color: #d0b090; font-size: 13px; text-decoration: none; letter-spacing: 0.08em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--wood-light); }
+.nav-phone { color: var(--wood-light) !important; font-weight: 700 !important; font-size: 14px !important; }
+.nav-cta { background: var(--green-cta); color: #fff !important; padding: 8px 20px; font-weight: 700 !important; border-radius: 2px; }
+.nav-cta:hover { background: var(--green-hover) !important; }
 
 .hero {
-  background: var(--dark); min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(61,43,31,0.88) 0%, rgba(92,61,46,0.75) 60%, rgba(61,43,31,0.6) 100%),
+              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;
+  display: flex; flex-direction: column; justify-content: center;
   padding: 100px 80px 80px; position: relative; overflow: hidden;
 }
-.hero::before {
-  content: '大工'; position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
-  font-family: 'Noto Serif JP', serif; font-size: 280px; font-weight: 900;
-  color: rgba(255,255,255,0.03); pointer-events: none; line-height: 1;
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green-cta); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.15em;
+  padding: 6px 16px; margin-bottom: 32px; width: fit-content;
 }
-.hero-label { font-size: 12px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 24px; }
-.hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.35; color: var(--cream); margin-bottom: 20px; letter-spacing: 0.05em; }
-.hero h1 em { font-style: normal; color: var(--gold); }
-.hero p { font-size: 15px; color: #aaa; line-height: 1.9; max-width: 480px; margin-bottom: 40px; }
+.hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(36px, 5.5vw, 64px); font-weight: 900; line-height: 1.3; color: #fff; margin-bottom: 8px; letter-spacing: 0.03em; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero h1 em { font-style: normal; color: var(--wood-light); }
+.hero-sub { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 3.5vw, 40px); font-weight: 700; color: #fff; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero p { font-size: 15px; color: #d0c0b0; line-height: 1.9; max-width: 520px; margin-bottom: 40px; }
+.hero p strong { color: #fff; }
 .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn-primary { background: var(--gold); color: var(--dark); padding: 14px 36px; font-size: 14px; font-weight: 700; text-decoration: none; letter-spacing: 0.1em; transition: opacity 0.2s; }
-.btn-primary:hover { opacity: 0.85; }
-.btn-outline { border: 1px solid #555; color: #ccc; padding: 14px 36px; font-size: 14px; text-decoration: none; letter-spacing: 0.1em; transition: border-color 0.2s, color 0.2s; }
-.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-green { background: var(--green-cta); color: #fff; padding: 16px 36px; font-size: 15px; font-weight: 700; text-decoration: none; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; border-radius: 2px; }
+.btn-green:hover { background: var(--green-hover); }
+.btn-wood { border: 2px solid var(--wood-light); color: var(--wood-light); padding: 16px 36px; font-size: 15px; text-decoration: none; letter-spacing: 0.1em; transition: background 0.2s, color 0.2s; }
+.btn-wood:hover { background: var(--wood-light); color: #fff; }
 
-section { padding: 80px 80px; }
-.sec-label { font-size: 11px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 12px; display: block; }
-.sec-title { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--dark); margin-bottom: 32px; line-height: 1.4; }
+.sasai { background: var(--brown-dark); }
+.sasai-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; }
+.sasai-img { background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80') center/cover no-repeat; min-height: 320px; }
+.sasai-text { padding: 60px 56px; display: flex; flex-direction: column; justify-content: center; }
+.sasai-text h2 { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 20px; }
+.sasai-text h2 span { color: var(--wood-light); }
+.sasai-text p { font-size: 14px; color: #c0a888; line-height: 1.95; margin-bottom: 28px; }
+.sasai-text p strong { color: #fff; }
 
-.reasons { background: var(--dark); color: var(--cream); }
-.reasons .sec-title { color: var(--cream); }
-.reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.reason-card { border-top: 2px solid var(--gold); padding-top: 24px; }
-.reason-num { font-family: 'Noto Serif JP', serif; font-size: 40px; font-weight: 900; color: rgba(200,169,110,0.3); line-height: 1; margin-bottom: 12px; }
-.reason-card h3 { font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 10px; }
-.reason-card p { font-size: 13px; color: #aaa; line-height: 1.8; }
+.reasons { background: var(--beige); padding: 80px; }
+.sec-label { font-size: 11px; letter-spacing: 0.3em; color: var(--wood); margin-bottom: 12px; display: block; }
+.sec-title { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 700; color: var(--brown-dark); margin-bottom: 40px; line-height: 1.4; }
+.reasons-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.reason-card { background: var(--warm-white); border-top: 3px solid var(--wood); padding: 28px 24px; box-shadow: 0 2px 16px rgba(92,61,46,0.08); }
+.reason-num { font-family: 'Noto Serif JP', serif; font-size: 42px; font-weight: 900; color: var(--beige-mid); line-height: 1; margin-bottom: 12px; }
+.reason-card h3 { font-size: 16px; font-weight: 700; color: var(--brown-dark); margin-bottom: 10px; }
+.reason-card p { font-size: 13px; color: var(--text-mid); line-height: 1.85; }
 
-.services { background: var(--light); }
+.services { background: var(--warm-white); padding: 80px; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.service-card { background: #fff; border-left: 4px solid var(--gold); padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-.service-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-.service-card .price { font-size: 18px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
-.service-card p { font-size: 12px; color: #777; line-height: 1.7; }
+.service-card { background: var(--beige); border-left: 4px solid var(--wood); padding: 24px 20px; transition: transform 0.2s, box-shadow 0.2s; }
+.service-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(92,61,46,0.12); }
+.service-card h3 { font-size: 15px; font-weight: 700; color: var(--brown-dark); margin-bottom: 8px; }
+.service-card .price { font-size: 20px; font-weight: 700; color: var(--wood); margin-bottom: 8px; font-family: 'Noto Serif JP', serif; }
+.service-card p { font-size: 12px; color: var(--text-mid); line-height: 1.75; }
 
-.flow { background: #fff; }
+.flow { background: var(--brown-dark); padding: 80px; }
+.flow .sec-label { color: var(--wood-light); }
+.flow .sec-title { color: var(--cream); }
 .flow-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-.flow-steps::before { content: ''; position: absolute; top: 36px; left: 10%; right: 10%; height: 2px; background: var(--gold); z-index: 0; }
-.step { text-align: center; position: relative; z-index: 1; padding: 0 12px; }
-.step-num { width: 72px; height: 72px; background: var(--dark); color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; }
-.step h4 { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
-.step p { font-size: 11px; color: #888; line-height: 1.6; }
+.flow-steps::before { content: ''; position: absolute; top: 36px; left: 10%; right: 10%; height: 2px; background: var(--wood); z-index: 0; }
+.step { text-align: center; position: relative; z-index: 1; padding: 0 10px; }
+.step-num { width: 72px; height: 72px; background: var(--wood); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; }
+.step h4 { font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+.step p { font-size: 11px; color: #a08070; line-height: 1.6; }
 
-.voices { background: var(--cream); }
+.voices { background: var(--beige); padding: 80px; }
 .voices-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.voice-card { background: #fff; padding: 24px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); position: relative; }
-.voice-card::before { content: '❝'; position: absolute; top: 16px; left: 16px; color: var(--gold); font-size: 24px; }
-.voice-card p { font-size: 13px; color: #444; line-height: 1.8; padding-top: 24px; }
+.voice-card { background: var(--warm-white); padding: 28px 24px; box-shadow: 0 2px 12px rgba(92,61,46,0.08); border-bottom: 3px solid var(--wood-light); position: relative; }
+.voice-card::before { content: '❝'; position: absolute; top: 16px; left: 16px; color: var(--wood-light); font-size: 28px; opacity: 0.5; }
+.voice-card p { font-size: 13px; color: var(--text-mid); line-height: 1.85; padding-top: 20px; }
+.voice-area { font-size: 11px; color: var(--text-light); margin-top: 12px; letter-spacing: 0.1em; }
 
-.about { background: var(--dark); color: var(--cream); }
+.about { background: var(--brown-mid); padding: 80px; }
 .about .sec-title { color: var(--cream); }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.about-text p { font-size: 14px; line-height: 2; color: #bbb; }
+.about-text p { font-size: 14px; line-height: 2.1; color: #c0a888; }
 .about-table { width: 100%; border-collapse: collapse; }
-.about-table tr { border-bottom: 1px solid #333; }
-.about-table th { font-size: 12px; letter-spacing: 0.1em; color: var(--gold); font-weight: 500; padding: 12px 0; text-align: left; width: 120px; }
-.about-table td { font-size: 13px; color: #ccc; padding: 12px 0; }
+.about-table tr { border-bottom: 1px solid rgba(160,114,74,0.3); }
+.about-table th { font-size: 12px; color: var(--wood-light); font-weight: 500; padding: 12px 0; text-align: left; width: 120px; }
+.about-table td { font-size: 13px; color: #d0b898; padding: 12px 0; }
 
-.cta { background: var(--gold); text-align: center; padding: 80px; }
-.cta h2 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 900; color: var(--dark); margin-bottom: 12px; }
-.cta p { font-size: 14px; color: #5a3c00; margin-bottom: 32px; }
-.cta-phone { font-family: 'Noto Serif JP', serif; font-size: 42px; font-weight: 700; color: var(--dark); letter-spacing: 0.05em; display: block; margin-bottom: 8px; text-decoration: none; }
-.cta-sub { font-size: 13px; color: #7a5420; margin-bottom: 24px; }
-.cta-email { font-size: 14px; color: var(--dark); text-decoration: none; border-bottom: 1px solid rgba(26,26,26,0.3); }
-
-.license-badge { display: inline-block; background: var(--dark); color: var(--gold); font-size: 12px; padding: 6px 16px; letter-spacing: 0.1em; margin-top: 24px; }
-
-/* 写真送信フォームセクション */
-.photo-contact { background: var(--light); }
-.photo-contact .sec-title { color: var(--dark); }
-.photo-steps {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  margin-bottom: 40px;
-}
-.photo-step {
-  background: #fff; padding: 24px 20px; text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  border-top: 3px solid var(--gold);
-}
-.photo-step .step-icon { font-size: 36px; margin-bottom: 12px; }
-.photo-step h4 { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-.photo-step p { font-size: 12px; color: #777; line-height: 1.7; }
+.photo-contact { background: var(--beige); padding: 80px; }
+.photo-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.photo-step { background: var(--warm-white); padding: 28px 24px; text-align: center; box-shadow: 0 2px 12px rgba(92,61,46,0.08); border-top: 3px solid var(--wood); }
+.photo-step .step-icon { font-size: 40px; margin-bottom: 14px; }
+.photo-step h4 { font-size: 15px; font-weight: 700; color: var(--brown-dark); margin-bottom: 8px; }
+.photo-step p { font-size: 12px; color: var(--text-mid); line-height: 1.75; }
 .photo-cta-wrap { text-align: center; }
-.btn-form {
-  display: inline-block;
-  background: var(--gold); color: var(--dark);
-  padding: 18px 48px; font-size: 16px; font-weight: 700;
-  text-decoration: none; letter-spacing: 0.1em;
-  transition: opacity 0.2s; margin-bottom: 12px;
-}
-.btn-form:hover { opacity: 0.85; }
-.form-note { font-size: 12px; color: #999; letter-spacing: 0.05em; }
+.btn-form { display: inline-flex; align-items: center; gap: 10px; background: var(--green-cta); color: #fff; padding: 18px 48px; font-size: 16px; font-weight: 700; text-decoration: none; letter-spacing: 0.1em; transition: background 0.2s; border-radius: 2px; margin-bottom: 12px; }
+.btn-form:hover { background: var(--green-hover); }
+.form-note { font-size: 12px; color: var(--text-light); }
 
-footer { background: #111; color: #666; text-align: center; padding: 24px; font-size: 12px; letter-spacing: 0.1em; }
+.cta { background: var(--wood); padding: 80px; text-align: center; }
+.cta h2 { font-family: 'Noto Serif JP', serif; font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+.cta p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 32px; }
+.cta-phone { font-family: 'Noto Serif JP', serif; font-size: 44px; font-weight: 700; color: #fff; display: block; margin-bottom: 8px; text-decoration: none; letter-spacing: 0.05em; }
+.cta-sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-bottom: 28px; }
+.cta-email { font-size: 14px; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+.license-badge { display: inline-block; background: var(--brown-dark); color: var(--wood-light); font-size: 12px; padding: 6px 16px; letter-spacing: 0.1em; margin-top: 24px; }
+
+footer { background: var(--brown-dark); color: #70503a; text-align: center; padding: 24px; font-size: 12px; letter-spacing: 0.08em; }
 
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
-  section { padding: 60px 24px; }
+  .reasons, .services, .flow, .voices, .about, .photo-contact, .cta { padding: 60px 24px; }
   .hero { padding: 100px 24px 60px; }
   .hero h1 { font-size: 30px; }
-  .reasons-grid, .services-grid, .voices-grid { grid-template-columns: 1fr; }
+  .sasai-inner { grid-template-columns: 1fr; }
+  .sasai-img { min-height: 220px; }
+  .sasai-text { padding: 40px 24px; }
+  .reasons-grid, .services-grid, .voices-grid, .photo-steps { grid-template-columns: 1fr; }
   .flow-steps { grid-template-columns: 1fr; gap: 24px; }
   .flow-steps::before { display: none; }
   .about-inner { grid-template-columns: 1fr; gap: 32px; }
-  .cta { padding: 60px 24px; }
   .cta-phone { font-size: 32px; }
 }
 </style>
@@ -147,93 +161,75 @@ footer { background: #111; color: #666; text-align: center; padding: 24px; font-
 <body>
 
 <nav>
-  <div class="nav-logo">岡田建設工</div>
+  <div class="nav-logo">
+    <div class="nav-logo-main">岡田建設工</div>
+    <div class="nav-logo-sub">住まいの困りごと、すぐ解決</div>
+  </div>
   <ul class="nav-links">
     <li><a href="#reasons">選ばれる理由</a></li>
-    <li><a href="#services">サービス</a></li>
-    <li><a href="#flow">ご依頼の流れ</a></li>
-    <li><a href="#about">会社概要</a></li>
-    <li><a href="#photo-contact">写真で相談</a></li>
-    <li><a href="#cta" class="nav-cta">お問い合わせ</a></li>
+    <li><a href="#services">料金メニュー</a></li>
+    <li><a href="#flow">相談の流れ</a></li>
+    <li><a href="#about">会社案内</a></li>
+    <li><a href="tel:0744249187" class="nav-phone">☎ 0744-24-9187</a></li>
+    <li><a href="#photo-contact" class="nav-cta">📷 無料相談はこちら</a></li>
   </ul>
 </nav>
 
 <section class="hero" id="top">
-  <div class="hero-label">OKADA KENSETSUKOU — 奈良・大阪・和歌山の大工工務店</div>
-  <h1>大工が直接やるから、<br><em>安くて丁寧。</em></h1>
-  <p>中間業者を挟まず、職人が直接対応。<br>手すり取付・床補修・ドア修理・ウッドデッキなど、<br>小さな工事から本格リフォームまで承ります。</p>
+  <div class="hero-badge">⏱ 写真を送れば24時間以内に概算回答！</div>
+  <h1>電話しなくていい。<br><em>写真を送るだけで</em></h1>
+  <div class="hero-sub">住まいの悩みが解決。</div>
+  <p>「電話するのは勇気がいるけれど、放っておけない家の悩み」<br>
+  岡田建設工なら、<strong>スマホで写真を撮って送るだけ。</strong><br>
+  雨漏り1カ所から、網戸の張り替えまで、なんでもご相談ください。</p>
   <div class="hero-btns">
-    <a href="#cta" class="btn-primary">無料で相談する</a>
-    <a href="#services" class="btn-outline">サービスを見る</a>
+    <a href="#photo-contact" class="btn-green">📷 今すぐ写真を送る</a>
+    <a href="#services" class="btn-wood">料金メニューを見る</a>
   </div>
 </section>
+
+<div class="sasai">
+  <div class="sasai-inner">
+    <div class="sasai-img"></div>
+    <div class="sasai-text">
+      <h2>「こんな些細なことで<br>連絡していいの？」</h2>
+      <p>もちろんです！岡田建設工は、大きな工事だけでなく、<strong>網戸の張り替えや雨漏り1カ所の補修</strong>など、小さなお困りごとも喜んで承ります。<br><br>
+      まずは写真を1枚送ってみてください。それだけで十分です。</p>
+      <a href="#photo-contact" class="btn-green" style="width:fit-content;">📷 今すぐ写真を送る</a>
+    </div>
+  </div>
+</div>
 
 <section class="reasons" id="reasons">
   <span class="sec-label">WHY CHOOSE US</span>
   <div class="sec-title">岡田建設工が選ばれる<br>3つの理由</div>
   <div class="reasons-grid">
-    <div class="reason-card">
-      <div class="reason-num">01</div>
-      <h3>大工が直接対応</h3>
-      <p>下請けに回さず、職人自らが現場へ。余分なマージンなしで、適正価格を実現しています。</p>
-    </div>
-    <div class="reason-card">
-      <div class="reason-num">02</div>
-      <h3>小さな工事も大歓迎</h3>
-      <p>「頼むほどじゃないかな…」という小さな困りごとこそ、ご連絡ください。誠実に対応します。</p>
-    </div>
-    <div class="reason-card">
-      <div class="reason-num">03</div>
-      <h3>見積り・相談は無料</h3>
-      <p>現地確認・お見積りは完全無料。費用感だけ知りたいという相談も歓迎です。</p>
-    </div>
+    <div class="reason-card"><div class="reason-num">01</div><h3>大工が直接対応</h3><p>下請けに回さず、職人自らが現場へ。余分なマージンなしで、適正価格を実現しています。</p></div>
+    <div class="reason-card"><div class="reason-num">02</div><h3>小さな工事も大歓迎</h3><p>「頼むほどじゃないかな…」という小さな困りごとこそ、ご連絡ください。誠実に対応します。</p></div>
+    <div class="reason-card"><div class="reason-num">03</div><h3>写真送信で気軽に相談</h3><p>電話が苦手でも大丈夫。スマホで写真を撮って送るだけで、概算金額をお伝えします。</p></div>
   </div>
 </section>
 
 <section class="services" id="services">
-  <span class="sec-label">SERVICES</span>
-  <div class="sec-title">対応工事・料金の目安</div>
+  <span class="sec-label">PRICE MENU</span>
+  <div class="sec-title">料金メニュー</div>
   <div class="services-grid">
-    <div class="service-card">
-      <h3>バリアフリー・手すり取付</h3>
-      <div class="price">8,000円〜</div>
-      <p>玄関・廊下・階段・浴室など。転倒防止や介護対応リフォームに。</p>
-    </div>
-    <div class="service-card">
-      <h3>建具調整・ドア修理</h3>
-      <div class="price">5,000円〜</div>
-      <p>ドアや引き戸の開閉不良、建付け調整など。日常の小さな不便を解消。</p>
-    </div>
-    <div class="service-card">
-      <h3>床張替え・きしみ補修</h3>
-      <div class="price">12,000円〜</div>
-      <p>フローリングの傷み・きしみ音を解消。部分補修から全面張替えまで。</p>
-    </div>
-    <div class="service-card">
-      <h3>ウッドデッキ新設・補修</h3>
-      <div class="price">15,000円〜</div>
-      <p>腐食した板の取替えから新規設置まで。天然木・人工木どちらも対応。</p>
-    </div>
-    <div class="service-card">
-      <h3>内装リフォーム全般</h3>
-      <div class="price">要お見積り</div>
-      <p>壁・天井・収納など、室内の改修工事全般。まずはご相談ください。</p>
-    </div>
-    <div class="service-card">
-      <h3>その他、なんでもご相談を</h3>
-      <div class="price">要お見積り</div>
-      <p>「こんなこと頼めるかな？」という内容も歓迎。お気軽にどうぞ。</p>
-    </div>
+    <div class="service-card"><h3>バリアフリー・手すり取付</h3><div class="price">8,000円〜</div><p>玄関・廊下・階段・浴室など。転倒防止や介護対応リフォームに。</p></div>
+    <div class="service-card"><h3>建具調整・ドア修理</h3><div class="price">9,000円〜</div><p>ドアや引き戸の開閉不良、建付け調整など。日常の小さな不便を解消。</p></div>
+    <div class="service-card"><h3>床張替え・きしみ補修</h3><div class="price">40,000円〜</div><p>フローリングの傷み・きしみ音を解消。部分補修から全面張替えまで。</p></div>
+    <div class="service-card"><h3>ウッドデッキ新設・補修</h3><div class="price">30,000円〜</div><p>腐食した板の取替えから新規設置まで。天然木・人工木どちらも対応。</p></div>
+    <div class="service-card"><h3>内装リフォーム全般</h3><div class="price">要お見積り</div><p>壁・天井・収納など、室内の改修工事全般。まずはご相談ください。</p></div>
+    <div class="service-card"><h3>その他、なんでもご相談を</h3><div class="price">要お見積り</div><p>「こんなこと頼めるかな？」という内容も歓迎。お気軽にどうぞ。</p></div>
   </div>
 </section>
 
 <section class="flow" id="flow">
-  <span class="sec-label">FLOW</span>
-  <div class="sec-title">ご依頼の流れ</div>
+  <span class="sec-label">HOW IT WORKS</span>
+  <div class="sec-title">相談から完成までの流れ</div>
   <div class="flow-steps">
-    <div class="step"><div class="step-num">1</div><h4>お問い合わせ</h4><p>電話・メールでお気軽に</p></div>
-    <div class="step"><div class="step-num">2</div><h4>現地確認・お見積り</h4><p>無料でお伺いします</p></div>
-    <div class="step"><div class="step-num">3</div><h4>ご契約</h4><p>内容・金額にご納得の上で</p></div>
+    <div class="step"><div class="step-num">1</div><h4>写真を撮って送信</h4><p>フォームから写真と症状を送るだけ</p></div>
+    <div class="step"><div class="step-num">2</div><h4>概算金額をご連絡</h4><p>24時間以内にご回答</p></div>
+    <div class="step"><div class="step-num">3</div><h4>現地確認・お見積り</h4><p>無料でお伺いします</p></div>
     <div class="step"><div class="step-num">4</div><h4>施工</h4><p>大工が丁寧に対応</p></div>
     <div class="step"><div class="step-num">5</div><h4>完成・アフターフォロー</h4><p>施工後も安心してご相談を</p></div>
   </div>
@@ -243,9 +239,9 @@ footer { background: #111; color: #666; text-align: center; padding: 24px; font-
   <span class="sec-label">VOICES</span>
   <div class="sec-title">お客様の声</div>
   <div class="voices-grid">
-    <div class="voice-card"><p>小さな修理を嫌な顔せず来てくれました。近所でこんなに頼れる大工さんがいるとは思いませんでした。</p></div>
-    <div class="voice-card"><p>見積りが明確で、後から追加費用が出なかったのが一番安心でした。また何かあれば頼みたいです。</p></div>
-    <div class="voice-card"><p>電話してすぐに来てくれて、その日のうちに直してもらえました。本当に助かりました。</p></div>
+    <div class="voice-card"><p>写真を送ったらすぐに返事が来て、値段も明確でした。電話が苦手な私でも気軽に相談できました。</p><div class="voice-area">奈良市・50代女性</div></div>
+    <div class="voice-card"><p>小さな修理を嫌な顔せず来てくれました。近所でこんなに頼れる大工さんがいるとは思いませんでした。</p><div class="voice-area">橿原市・60代男性</div></div>
+    <div class="voice-card"><p>見積りが明確で、後から追加費用が出なかったのが一番安心でした。また何かあれば頼みたいです。</p><div class="voice-area">大阪府・40代女性</div></div>
   </div>
 </section>
 
@@ -253,14 +249,12 @@ footer { background: #111; color: #666; text-align: center; padding: 24px; font-
   <span class="sec-label">ABOUT</span>
   <div class="sec-title">会社概要</div>
   <div class="about-inner">
-    <div class="about-text">
-      <p>奈良県橿原市を拠点に活動してきた大工職人が、お客様と直接つながるために立ち上げた工務店です。<br><br>「業者に頼むほどでもないかな…」そんな小さな困りごとこそ、私たちの出番です。工事の大小問わず、誠実に対応します。</p>
-    </div>
+    <div class="about-text"><p>奈良県橿原市を拠点に活動してきた大工職人が、お客様と直接つながるために立ち上げた工務店です。<br><br>「業者に頼むほどでもないかな…」そんな小さな困りごとこそ、私たちの出番です。工事の大小問わず、誠実に対応します。</p></div>
     <div>
       <table class="about-table">
         <tr><th>会社名</th><td>合同会社 岡田建設工</td></tr>
         <tr><th>代表者</th><td>岡田 祥道（オカダ ヨシミチ）</td></tr>
-        <tr><th>所在地</th><td>〒634-0835<br>奈良県橿原市東坊城町90-3</td></tr>
+        <tr><th>所在地</th><td>〒634-0835 奈良県橿原市東坊城町90-3</td></tr>
         <tr><th>電話</th><td>0744-24-9187</td></tr>
         <tr><th>メール</th><td>okadakensetsukou@yahoo.co.jp</td></tr>
         <tr><th>建設業許可</th><td>奈良県知事許可 第018533号</td></tr>
@@ -277,7 +271,7 @@ footer { background: #111; color: #666; text-align: center; padding: 24px; font-
   <div class="photo-steps">
     <div class="photo-step"><div class="step-icon">📸</div><h4>① 気になる場所を撮影</h4><p>ドア・床・手すりなど、困っている箇所をスマホで写真に撮るだけ。</p></div>
     <div class="photo-step"><div class="step-icon">📋</div><h4>② フォームで送信</h4><p>写真と一緒に、症状や希望を簡単に入力して送信してください。</p></div>
-    <div class="photo-step"><div class="step-icon">💬</div><h4>③ 岡田がすぐ確認</h4><p>内容を確認次第、メールまたはお電話でご連絡します。もちろん無料です。</p></div>
+    <div class="photo-step"><div class="step-icon">💬</div><h4>③ 岡田がすぐ確認</h4><p>24時間以内にメールまたはお電話でご連絡します。もちろん無料です。</p></div>
   </div>
   <div class="photo-cta-wrap">
     <a href="https://docs.google.com/forms/d/1haeMuYqaEK8vMvtuX-hyDbuOutmuFPrH09jVKLE3vcg/viewform" target="_blank" class="btn-form">📷　写真を送って相談する（無料）</a>
@@ -288,7 +282,7 @@ footer { background: #111; color: #666; text-align: center; padding: 24px; font-
 <section class="cta" id="cta">
   <h2>まずはお気軽にご連絡ください</h2>
   <p>見積り・現地確認は完全無料。小さなご相談でも大歓迎です。</p>
-  <a href="tel:0744249187" class="cta-phone">📞 0744-24-9187</a>
+  <a href="tel:0744249187" class="cta-phone">☎ 0744-24-9187</a>
   <div class="cta-sub">合同会社 岡田建設工（代表直通）／ 8:00〜18:00（日祝も相談可）</div>
   <a href="mailto:okadakensetsukou@yahoo.co.jp" class="cta-email">✉ okadakensetsukou@yahoo.co.jp</a>
   <div><span class="license-badge">奈良県知事許可 第018533号</span></div>
